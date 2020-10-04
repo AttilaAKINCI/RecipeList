@@ -11,6 +11,7 @@ Android Kotlin ContentFul API sample
 * Graph Scoped ViewModels
 * Databinding
 * ROOM Databases
+* Timber API for client side logging 
 * Navigation Component
 * View Transitions in Navigation Component
 * ContentFul API (includes Retrofit API)

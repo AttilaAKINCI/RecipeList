@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">recipeList</string>
+
+    <!-- SPLASH FRAGMENT -->
+    <string name="title_splash">Splash Screen</string>
+
+    <!-- RECIPE LISTING FRAGMENT -->
+    <string name="title_recipeList">Recipe List</string>
+
+    <!-- RECIPE DETAIL FRAGMENT -->
+    <string name="title_recipeDetail">Recipe Detail</string>
+    <string name="recipeDetail">Recipe Details</string>
+
+    <string name="chefName">Chef Name :</string>
+    <string name="calories">Calories :</string>
+    <string name="tags">Tags :</string>
+    <string name="description">Description</string>
+
+</resources>

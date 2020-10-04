@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.akinci.recipelist.features.splash.SplashScreenFragment">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="com.akinci.recipelist.features.recipes.recipeListing.view.RecipeListFragment"
+        android:label="@string/title_recipeList" >
+        <action
+            android:id="@+id/action_recipeListFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.akinci.recipelist.features.recipes.recipeDetail.view.RecipeDetailFragment"
+        android:label="@string/title_recipeDetail" >
+        <argument
+            android:name="recipeId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+        <argument
+            android:name="transitionString"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -3,13 +3,15 @@ Android Kotlin ContentFul API sample
 
 [APK Link (https://drive.google.com/file/d/1lHpgAixNPsk-dwVi8I_msLdweminSHUE/view?usp=sharing)](https://drive.google.com/file/d/1lHpgAixNPsk-dwVi8I_msLdweminSHUE/view?usp=sharing)
 
+<img src="https://user-images.githubusercontent.com/21987335/112758276-1ca16c80-8ff6-11eb-965f-a4649c24c59b.gif" width="400"/>
+
 #### This project scope covers the substances below
 * Kotlin 
 * Single activity multiple fragment approach
 * Offline usage capability
 * MVVM design parttern
-* Graph Scoped ViewModels
-* Databinding
+* Fragment / Activity Scoped ViewModels
+* Databinding, ViewBinding
 * ROOM Databases
 * Timber API for client side logging 
 * Navigation Component
@@ -17,16 +19,18 @@ Android Kotlin ContentFul API sample
 * ContentFul API (includes Retrofit API)
 * Kotlin coroutines
 * Live Data
-* Single source of thruth strategy
+* Lottie animations
+* Thrust Libraray for Assertions
+* Dependency Injection (HILT)
 * Suspend functions and LiveDataScopes
 * RecylerView with ListAdapter and DiffUtil
 * Facebook shimmer on listing page
 * Glide for picture loading over internet
 * Repository pattern for View Models
-* Test case sample development
+* MockK & JUnit5 for unit Testing 
+* JUnit4 for integration tests
 
 #### Possible future innovations after more functionality
-* Dependency injection with HILT
 * Search capability for recyclerList
 * Paging for recyclerlist using JetPack Paging library
 
@@ -37,7 +41,9 @@ Application initiates with a splash screen. After splash animation listing page 
 
 Listing page has a list insfrastructure so as to display recipes. The data have been fetched via contentful api. Considering to network delay, list loading animation has been provided by facebook shimmer library. 
 
-Data is evaluated with single source of thruth strategy. It means that the data which is fetched from internet (this case from ContentFul API), is stored in ROOM databases on the phone. During listing fused data is used for listing. Listing rows shows recipe image and recipe name on the list.
+Data is fetched from internet (this case from ContentFul API) and is shown in UI and also it is stored in ROOM databases on the phone. Listing rows shows recipe image and recipe name on the list.
+
+In case of network error, data will be fetched from ROOM DB in order to ensure a offline usage for better user experience
 
 Click action of each row navigates user to detail page of these recipes with view transion animation.
 

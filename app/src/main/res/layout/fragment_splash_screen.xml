@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary">
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".feature.login.view.SplashFragment">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="1"
+            android:adjustViewBounds="true"
+            android:translationX="40dp"
+            app:lottie_fileName="@string/lottie_cooking" />
 
         <ImageView
-            android:id="@+id/logo"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            app:srcCompat="@drawable/ic_logo"
-            android:tintMode="src_in"
-            app:tint="@color/colorSoftWhite"
-            android:scaleType="center"
-            android:scaleY="0"
-            android:scaleX="0"
-            android:layout_marginTop="175dp"
-            android:layout_centerHorizontal="true"/>
-
-        <ImageView
-            android:id="@+id/logo2"
+            android:id="@+id/logo_text"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/ic_logo2"
-            android:tintMode="src_in"
-            app:tint="@color/colorSoftWhite"
-            android:scaleType="center"
-            android:scaleY="0"
-            android:scaleX="0"
-            android:layout_below="@+id/logo"
-            android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"/>
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            android:background="@drawable/ic_logo2"
+            android:backgroundTintMode="src_in"
+            android:backgroundTint="@color/colorPrimary" />
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -3,4 +3,8 @@
     <dimen name="tag_margin">8dp</dimen>
     <dimen name="tag_height">30dp</dimen>
     <dimen name="tag_corner_radius">15dp</dimen>
+
+    <dimen name="text_style_medium">15sp</dimen>
+    <dimen name="line_height_button_primary">20sp</dimen>
+
 </resources>

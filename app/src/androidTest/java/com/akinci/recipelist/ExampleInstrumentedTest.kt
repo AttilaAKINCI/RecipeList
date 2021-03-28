@@ -4,9 +4,10 @@ import android.content.Context
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.akinci.recipelist.features.recipes.recipeListing.data.local.RecipeDAO
-import com.akinci.recipelist.features.recipes.recipeListing.data.local.RecipeDatabase
-import com.akinci.recipelist.features.recipes.recipeListing.data.local.RecipeEntity
+import androidx.test.runner.AndroidJUnit4
+import com.akinci.recipelist.features.acommon.data.local.RecipeDAO
+import com.akinci.recipelist.features.acommon.data.local.RecipeDatabase
+import com.akinci.recipelist.features.acommon.data.local.RecipeEntity
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import org.junit.After
@@ -50,7 +51,7 @@ class ExampleInstrumentedTest {
         val inputRecipe = RecipeEntity("Meat Soup","image_URL","Delicious soup ever", 10.0, "Mr. Akıncı","soup;healty;meat")
         dao.insert(inputRecipe)
 
-        val outputRecipe = dao.getRecipe("Meat Soup")
+        val outputRecipe = dao.getRecipeWithTitle("Meat Soup")
 
         assertNotEquals("Recipe not founded",null, outputRecipe)
         assertEquals("Recipe Titles Not equal",inputRecipe.title, outputRecipe.title)

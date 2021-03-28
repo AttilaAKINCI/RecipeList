@@ -7,22 +7,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-            <RelativeLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/shimmer_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/rowBg"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="5dp">
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="200dp"
+                android:background="@color/shimmerColor"/>
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_margin="10dp"
-                        app:cardCornerRadius="5dp">
+        </androidx.cardview.widget.CardView>
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/shimmerColor"/>
-
-                    </androidx.cardview.widget.CardView>
-            </RelativeLayout>
     </com.facebook.shimmer.ShimmerFrameLayout>
 </layout>

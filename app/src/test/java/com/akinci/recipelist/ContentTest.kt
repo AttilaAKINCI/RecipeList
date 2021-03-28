@@ -1,9 +1,6 @@
 package com.akinci.recipelist
 
-import com.akinci.recipelist.commons.data.coroutines.Status
-import com.akinci.recipelist.features.recipes.recipeListing.data.api.ContentHandler
-import com.akinci.recipelist.features.recipes.recipeListing.data.local.RecipeDAO
-import com.akinci.recipelist.features.recipes.recipeListing.data.local.RecipeDatabase
+import com.akinci.recipelist.features.listing.data.api.ContentHandler
 import com.contentful.java.cda.CDAClient
 import com.contentful.java.cda.CDASpace
 import org.junit.Assert

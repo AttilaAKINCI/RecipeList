@@ -1,16 +1,22 @@
 <resources>
-    <string name="app_name">recipeList</string>
+    <string name="app_name">RecipeList</string>
+
+    <!-- Lottie files -->
+    <string name="lottie_cooking">cooking.json</string>
 
     <!-- SPLASH FRAGMENT -->
-    <string name="title_splash">Splash Screen</string>
+    <string name="title_splash">Splash</string>
+    <string name="desc_splash">Splash Fragment</string>
 
     <!-- RECIPE LISTING FRAGMENT -->
-    <string name="title_recipeList">Recipe List</string>
+    <string name="title_recipe_list">Recipe List</string>
+    <string name="desc_recipe_list">Recipe List Fragment</string>
 
     <!-- RECIPE DETAIL FRAGMENT -->
-    <string name="title_recipeDetail">Recipe Detail</string>
-    <string name="recipeDetail">Recipe Details</string>
+    <string name="title_recipe_detail">Recipe Detail</string>
+    <string name="desc_recipe_detail">Recipe Detail Fragment</string>
 
+    <string name="recipeDetail">Recipe Details</string>
     <string name="chefName">Chef Name :</string>
     <string name="calories">Calories :</string>
     <string name="tags">Tags :</string>

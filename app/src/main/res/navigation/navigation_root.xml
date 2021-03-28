@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation_graph"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
     app:startDestination="@id/splashScreenFragment">
 
     <fragment
@@ -9,31 +10,25 @@
         <action
             android:id="@+id/action_splashScreenFragment_to_recipeListFragment"
             app:destination="@id/recipeListFragment"
-            app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/slide_out_right"
             app:launchSingleTop="true"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/recipeListFragment"
-        android:name="com.akinci.recipelist.features.recipes.recipeListing.view.RecipeListFragment"
-        android:label="@string/title_recipeList" >
+        android:name="com.akinci.recipelist.features.listing.view.RecipeListFragment"
+        android:label="@string/title_recipe_list" >
         <action
             android:id="@+id/action_recipeListFragment_to_recipeDetailFragment"
-            app:destination="@id/recipeDetailFragment"
-            app:enterAnim="@anim/fragment_fade_enter"
-            app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/fragment_fade_enter"
-            app:popExitAnim="@anim/fragment_fade_exit"/>
+            app:destination="@id/recipeDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/recipeDetailFragment"
-        android:name="com.akinci.recipelist.features.recipes.recipeDetail.view.RecipeDetailFragment"
-        android:label="@string/title_recipeDetail" >
+        android:name="com.akinci.recipelist.features.detail.view.RecipeDetailFragment"
+        android:label="@string/title_recipe_detail" >
         <argument
-            android:name="recipeId"
-            app:argType="long"
+            android:name="contentId"
+            app:argType="string"
             android:defaultValue="-1L" />
         <argument
             android:name="transitionString"

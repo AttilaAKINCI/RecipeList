@@ -1,62 +1,56 @@
 package com.akinci.recipelist.features.splash
 
 import android.animation.Animator
-import android.animation.ValueAnimator
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.navigation.NavOptions
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.akinci.recipelist.R
-import com.akinci.recipelist.commons.components.fragment.BaseFragment
 import com.akinci.recipelist.databinding.FragmentSplashScreenBinding
+import timber.log.Timber
 
-class SplashScreenFragment : BaseFragment() {
-
+class SplashScreenFragment : Fragment() {
     private lateinit var binding : FragmentSplashScreenBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        super.onCreateView(inflater, container, savedInstanceState)
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_splash_screen, container, false)
+        /** Initialization of ViewBinding not need for DataBinding here **/
+        binding = FragmentSplashScreenBinding.inflate(layoutInflater)
+        binding.lifecycleOwner = viewLifecycleOwner
 
-        val animator = ValueAnimator.ofFloat(0f, 1f)
-
-        animator.addUpdateListener {
-            val value = it.animatedValue as Float
-            binding.logo.scaleX = value
-            binding.logo.scaleY = value
-            binding.logo2.scaleX = value
-            binding.logo2.scaleY = value
-        }
-        animator.addListener(object : Animator.AnimatorListener {
+        binding.animation.addAnimatorListener(object : Animator.AnimatorListener {
+            override fun onAnimationStart(animation: Animator?) {}
             override fun onAnimationEnd(animation: Animator?) { navigateToListing() }
             override fun onAnimationCancel(animation: Animator?) {}
             override fun onAnimationRepeat(animation: Animator?) {}
-            override fun onAnimationStart(animation: Animator?) {}
         })
 
-        animator.duration = 1000L
-        animator.startDelay = 400L
-        animator.start()
-
+        Timber.d("SplashFragment created..")
         return binding.root
     }
 
+    override fun onStart() {
+        super.onStart()
+        binding.animation.playAnimation()
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //hide appbar on splash screen
+        (activity as AppCompatActivity).supportActionBar?.hide()
+    }
+
     fun navigateToListing(){
-        Handler().postDelayed({
-            NavHostFragment.findNavController(this)
-                .navigate(R.id.action_splashScreenFragment_to_recipeListFragment,
-                    null,
-                    NavOptions.Builder()
-                        .setPopUpTo(R.id.splashScreenFragment,
-                            true).build()
-                )
-        }, 1000)
+        Handler(Looper.getMainLooper()).postDelayed({
+            /** Navigate to Recipe List Page **/
+            NavHostFragment.findNavController(this).navigate(R.id.action_splashScreenFragment_to_recipeListFragment)
+        }, 100)
     }
 }

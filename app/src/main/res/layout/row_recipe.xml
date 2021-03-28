@@ -5,7 +5,7 @@
     <data>
         <variable
             name="data"
-            type="com.akinci.recipelist.features.recipes.recipeListing.data.local.RecipeEntity"/>
+            type="com.akinci.recipelist.features.acommon.data.output.RecipeResponse"/>
     </data>
 
     <RelativeLayout

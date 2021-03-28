@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".RootActivity">
+        android:layout_height="match_parent" >
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.akinci.recipelist.commons.components.widget.CustomToolbar
+            <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+                android:theme="@style/ToolbarTheme"
+                android:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
         <fragment
-            android:id="@+id/nav_host_fragment"
+            android:id="@+id/navHostFragment"
+            android:tag="navHostFragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/appBarLayout"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/navigation_root" />
+            app:defaultNavHost="true"/>
 
     </RelativeLayout>
 </layout>

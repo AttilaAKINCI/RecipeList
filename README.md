@@ -44,6 +44,7 @@ Click action of each row navigates user to detail page of these recipes with vie
 In Detail Page, user can view additional information about recipes (recipe name, recipe visuals, chef name, calories, some tags, description)
 
 #### ScreenShoots
-<img src="https://github.com/AttilaAKINCI/recipeList/blob/main/app/screenshots/device-2020-10-04-181817.png" width="200">   <img src="https://github.com/AttilaAKINCI/recipeList/blob/main/app/screenshots/device-2020-10-04-181945.png" width="200">   <img src="https://github.com/AttilaAKINCI/recipeList/blob/main/app/screenshots/device-2020-10-04-182003.png" width="200">   <img src="https://github.com/AttilaAKINCI/recipeList/blob/main/app/screenshots/device-2020-10-04-182014.png" width="200"> 
+
+<img src="https://github.com/AttilaAKINCI/recipeList/blob/main/app/screenshots/device-2021-03-28-183055.png" width="231">   <img src="https://github.com/AttilaAKINCI/recipeList/blob/main/app/screenshots/device-2020-10-04-181945.png" width="200">   <img src="https://github.com/AttilaAKINCI/recipeList/blob/main/app/screenshots/device-2020-10-04-182003.png" width="200">   <img src="https://github.com/AttilaAKINCI/recipeList/blob/main/app/screenshots/device-2020-10-04-182014.png" width="200"> <img src="https://github.com/AttilaAKINCI/recipeList/blob/main/app/screenshots/device-2021-03-28-182952.png" width="231"> 
 
 

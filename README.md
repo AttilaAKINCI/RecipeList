@@ -1,4 +1,4 @@
-# recipeList
+# Recipe List
 Android Kotlin ContentFul API sample
 
 [APK Link (https://drive.google.com/file/d/1lHpgAixNPsk-dwVi8I_msLdweminSHUE/view?usp=sharing)](https://drive.google.com/file/d/1lHpgAixNPsk-dwVi8I_msLdweminSHUE/view?usp=sharing)

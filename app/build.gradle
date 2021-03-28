@@ -18,12 +18,11 @@ android {
         versionName "1.0"
         multiDexEnabled true
 
-
         buildConfigField("String", "CDA_LOCALE", CDA_LOCALE)
         buildConfigField("String", "CDA_TOKEN", CDA_TOKEN)
         buildConfigField("String", "CDA_SPACE", CDA_SPACE)
 
-        testInstrumentationRunner "com.akinci.socialapitrial.HiltTestRunner"
+        testInstrumentationRunner "com.akinci.recipelist.HiltTestRunner"
     }
 
     buildTypes {
@@ -58,6 +57,10 @@ dependencies {
     implementation "androidx.room:room-runtime:${room_version}"
     kapt "androidx.room:room-compiler:${room_version}"
     implementation "androidx.room:room-ktx:${room_version}"
+
+    // Moshi Json handler
+    implementation("com.squareup.moshi:moshi-kotlin:1.11.0")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.10.0")
 
     //NavigationComponent
     implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"

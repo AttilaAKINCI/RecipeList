@@ -28,7 +28,7 @@ Android Kotlin ContentFul API sample
 * Glide for picture loading over internet
 * Repository pattern for View Models
 * MockK & JUnit5 for unit Testing 
-* JUnit4 for integration tests
+* JUnit4, HILT usage for integration tests
 
 #### Possible future innovations after more functionality
 * Search capability for recyclerList

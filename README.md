@@ -1,5 +1,5 @@
 # RecipeList
-RecipeList is a book that contains amazing recipes for you !! 
+RecipeList is a book that contains amazing recipes for you via Contentful API !! 
 
 > [!NOTE]
 > Please be aware !! This repository ontains legacy implementations and arhitectures.

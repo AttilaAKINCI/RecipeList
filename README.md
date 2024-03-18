@@ -1,5 +1,9 @@
-# Recipe List
-Android Kotlin ContentFul API sample
+# RecipeList
+RecipeList is a book that contains amazing recipes for you !! 
+
+> [!NOTE]
+> Please be aware !! This repository ontains legacy implementations and arhitectures.
+> It's no longer possible to refactor, modernize due to insufficient data source. it's arhieved and won't be supperted in the future.
 
 [APK Link (https://drive.google.com/file/d/1lHpgAixNPsk-dwVi8I_msLdweminSHUE/view?usp=sharing)](https://drive.google.com/file/d/1lHpgAixNPsk-dwVi8I_msLdweminSHUE/view?usp=sharing)
 
